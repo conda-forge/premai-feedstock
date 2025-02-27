@@ -1,5 +1,5 @@
 {% set name = "premai" %}
-{% set version = "0.3.103" %}
+{% set version = "0.3.104" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/premai-{{ version }}.tar.gz
-  sha256: ee6bcff0198b051dcb8f0aa1a6957c42583e010882fec1a219f5c771a70fe8bb
+  sha256: 17fd670064439e58d357c9362fcf10e3834dd54e876275e9cd21c5f767310410
 
 build:
   noarch: python
