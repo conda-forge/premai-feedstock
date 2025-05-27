@@ -1,5 +1,5 @@
 {% set name = "premai" %}
-{% set version = "0.3.108" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/premai-{{ version }}.tar.gz
-  sha256: f6c97dcfacf75002a3dace74e41a68b9a0328b2fdb65c2ed937d31a0ac5d5883
+  sha256: 63737bd22dfa7a8fcad468666376699ee7b750a01099b3ebf08d3841ce6c2dc2
 
 build:
   noarch: python
@@ -20,11 +20,15 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
+    - anyio >=3.5.0,<5
+    - distro >=1.7.0,<2
+    - pydantic >=1.9.0,<3
+    - sniffio
     - python >={{ python_min }},<4.0.0
-    - httpx >=0.20.0,<0.27.0
+    - httpx >=0.23.0,<1
     - attrs >=21.3.0
     - python-dateutil >=2.8.0,<3.0.0
-    - typing_extensions >=4.9.0
+    - typing_extensions >=4.10,<5
 
 test:
   imports:
