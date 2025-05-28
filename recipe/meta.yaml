@@ -18,6 +18,7 @@ requirements:
   host:
     - python {{ python_min }}
     - hatchling
+    - hatch-fancy-pypi-readme
     - pip
   run:
     - anyio >=3.5.0,<5
